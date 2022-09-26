@@ -34,7 +34,7 @@ while True:
 
     # If the transcription is complete, save it to a .txt file
     if polling_response.json()['status'] == 'completed':
-        with open(f'{_id.strip()}.txt', 'w') as f:
+        with open(f'{_id}.txt', 'w') as f:
             f.write(polling_response.json()['text'])
         print('Transcript saved to', _id, '.txt')
         break
